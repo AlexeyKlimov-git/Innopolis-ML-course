@@ -10,11 +10,12 @@ flask run
 
 # Пример использования:
 
-Главня страница приожения.
-![image](https://github.com/UserNameBlaBlaBlaBla/InnopolysFinal/assets/53517548/ba45f0a4-3aad-4e56-8dfe-5b52d8c5e18e)
+Главня страница приожения (Форма с заполненными данными).
+<img width="661" alt="image" src="https://github.com/AlexeyKlimov-git/Innopolis-ML-course/assets/59765489/6405a837-551d-448c-9294-23a062eb72cf">
 
-Форма с заполненными данными.
-![image](https://github.com/UserNameBlaBlaBlaBla/InnopolysFinal/assets/53517548/ded478c5-b036-4ca4-b01f-82d1596de9ff)
 
 Пример вывода результата.
-![image](https://github.com/UserNameBlaBlaBlaBla/InnopolysFinal/assets/53517548/e46afa29-34e1-41c2-af55-eaed99a1fcaf)
+<img width="579" alt="image" src="https://github.com/AlexeyKlimov-git/Innopolis-ML-course/assets/59765489/eb35b715-8426-4b1f-8e8d-ba1f75e099e4">
+
+История результатов:
+<img width="1440" alt="image" src="https://github.com/AlexeyKlimov-git/Innopolis-ML-course/assets/59765489/e88b412e-aa82-48e4-87a1-80628380bcd4">
