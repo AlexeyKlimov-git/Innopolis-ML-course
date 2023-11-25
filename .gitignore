@@ -1,0 +1,5 @@
+test/*
+__pycache__
+db/*.db
+result/*
+extracted_features.csv

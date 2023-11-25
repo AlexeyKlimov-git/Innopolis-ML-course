@@ -1,0 +1,12 @@
+fixed acidity	volatile acidity	citric acid	residual sugar	chlorides	free sulfur dioxide	total sulfur dioxide	density	pH	sulphates	alcohol
+7.5
+0.75
+3.00
+3.9
+0.176
+12.0
+35.0
+0.91
+3.9
+0.56
+9.4
