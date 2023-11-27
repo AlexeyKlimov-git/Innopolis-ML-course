@@ -9,8 +9,17 @@ import os
 
 app = Flask(__name__)
 
-rf_model_loaded = pickle.load(open(Path("static/rf_model_init.sav"), "rb"))
-scaler_loaded = pickle.load(open(Path("static/scaler_init.sav"), "rb"))
+PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
+def __predict(path_to_model, features: np.ndarray) -> np.ndarray:
+    model = rt.InferenceSession(
+        os.path.join(PROJECT_ROOT, path_to_model)
+    )
+    input_name = model.get_inputs()[0].name
+    label_name = model.get_outputs()[0].name
+    return model.run(
+        [label_name],
+        {input_name: features.astype(np.float32)},
+    )
 
 
 @app.route("/")
@@ -54,9 +63,8 @@ def addrec():
                     alcohol,
                 ]
             )
-            X_scaled = scaler_loaded.transform(X)
-            quality = rf_model_loaded.predict(X_scaled)[0]
-            print(quality)
+            X_scaled = __predict("static/scaler_init.onnx", X)
+            quality = __predict("static/rf_model_init.onnx", X_scaled)
 
             with sql.connect("database.db") as con:
                 cur = con.cursor()
@@ -88,6 +96,7 @@ def addrec():
                 )
 
                 con.commit()
+
                 res = "хорошее" if quality == 1 else "плохое"
                 msg = f"Вино {res}"
         except:
